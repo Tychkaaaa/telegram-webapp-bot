@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram WebApp</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h3>Привет из WebApp!</h3>
+  <input id="msg" placeholder="Сообщение боту">
+  <br><br>
+  <button onclick="sendData()">Отправить</button>
+
+  <script>
+    function sendData() {
+      const input = document.getElementById("msg").value;
+      Telegram.WebApp.sendData(input);
+      Telegram.WebApp.close();
+    }
+  </script>
+</body>
+</html>
